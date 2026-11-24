@@ -15,7 +15,7 @@ and 1-4. Sampled actions, no human input.*
 
 ## Overview
 
-GQ-Dreamer (**GroundQuery-Dreamer**) is a Dreamer-style agent with two changes to the classic recipe:
+GQ-Dreamer (**GroundQuery-Dreamer**) is a new world-model agent of the Dreamer family. Its two main components are:
 
 - **GroundQuery tokenizer.** The encoder is a fusion transformer that reads the screen as patch tokens *together with* a
   few game-state tokens (explored grid, level, power-up status). A set of **32 learned latent queries** reads the fused
@@ -140,9 +140,12 @@ main.ipynb          training
 run.ipynb           play the trained model
 ```
 
-## Acknowledgements
+## Related work
 
-GQ-Dreamer builds on [DreamerV3](https://arxiv.org/abs/2301.04104) (Hafner et al.), transformer world models such as
-[TWM](https://arxiv.org/abs/2303.07109) and [STORM](https://arxiv.org/abs/2310.09615), HL-Gauss value targets
-([Farebrother et al., 2024](https://arxiv.org/abs/2403.03950)) and the [PyBoy](https://github.com/Baekalfen/PyBoy)
-emulator. Super Mario Bros. Deluxe is © Nintendo; this repository contains no game data.
+GQ-Dreamer is a new model of the Dreamer family of world-model agents, alongside
+[DreamerV3](https://arxiv.org/abs/2301.04104) and transformer world models such as
+[TWM](https://arxiv.org/abs/2303.07109), [IRIS](https://arxiv.org/abs/2209.00588) and
+[STORM](https://arxiv.org/abs/2310.09615): it learns a model of the environment and trains its policy in imagination.
+It uses HL-Gauss value targets ([Farebrother et al., 2024](https://arxiv.org/abs/2403.03950)) and the
+[PyBoy](https://github.com/Baekalfen/PyBoy) emulator. Super Mario Bros. Deluxe is © Nintendo; this repository contains
+no game data.
