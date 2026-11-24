@@ -1,0 +1,19 @@
+# Training outputs
+checkpoints/
+dreams/
+recordings/
+plots/
+diagnostics/
+metrics/*_before_*.csv
+metrics/*.bak.csv
+
+# Game ROMs and save RAM are not distributed: copy your own ROM to game/
+game/*.gb
+game/*.gbc
+game/*.ram
+
+# Python, notebooks, editors
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/

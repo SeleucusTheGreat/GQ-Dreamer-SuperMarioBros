@@ -1,0 +1,6 @@
+torch>=2.4                 # CUDA build from https://pytorch.org for training; the CPU build can play the model
+pyboy>=2.7,<2.8            # the start states in game/ load with PyBoy 2.7
+gymnasium>=1.0
+numpy>=1.24
+opencv-python>=4.8         # recordings
+matplotlib>=3.7            # plots, dream PDFs
